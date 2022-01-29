@@ -26,6 +26,73 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameStateExecuter[] Executers;
 
+
+    //fade—p‚Ìƒpƒlƒ‹
+    public CanvasGroup transitionpanel;
+
+    public IEnumerator FadeOut(float time, Action action = null)
+    {
+        print("fade");
+        float mult = 1 / time;
+        transitionpanel.alpha = 0;
+
+        while (transitionpanel.alpha < 1)
+        {
+            transitionpanel.alpha += Time.deltaTime * mult;
+            transitionpanel.alpha = Mathf.Min(transitionpanel.alpha, 1);
+            if (action != null)
+            {
+                action();
+            }
+            yield return null;
+        }
+        transitionpanel.alpha = 1;
+
+    }
+    public IEnumerator FadeIn(float time, Action action = null)
+    {
+        float mult = 1 / time;
+
+        transitionpanel.alpha = 1;
+
+        while (transitionpanel.alpha > 0)
+        {
+            transitionpanel.alpha -= Time.deltaTime * mult;
+            transitionpanel.alpha = Mathf.Max(transitionpanel.alpha, 0);
+
+            if (action != null)
+            {
+                action();
+            }
+            yield return null;
+        }
+        transitionpanel.alpha = 0;
+    }
+    public IEnumerator In(float time, Action action = null)
+    {
+        float timer = 0;
+
+        do
+        {
+            timer = Mathf.Min(timer + Time.deltaTime, time);
+            transitionpanel.alpha = 1 - timer / time;
+            if (action != null)
+            {
+                action();
+            }
+            yield return null;
+
+        } while (timer < time);
+        transitionpanel.alpha = 0;
+    }
+
+
+
+
+
+
+
+
     private void OnValidate()
     {
         if (Executers.Length!= Enum.GetNames(typeof(gamestate)).Length)
@@ -38,10 +105,8 @@ public class GameManager : MonoBehaviour
             if (item == null)
             {
                 Debug.LogError("GameStateExecuter is null");
-
             }
         }
-
     }
 
 
@@ -59,14 +124,13 @@ public class GameManager : MonoBehaviour
 
         GAME_AWAKE();
     }
+
     void GAME_AWAKE()
     {
         Input.Init();
 
         StateQueue((int)gamestate.Title);
 
-
-        Physics2D.autoSyncTransforms = true;
     }
 
     public void StateQueue(int to = -1)
@@ -99,6 +163,57 @@ public class GameManager : MonoBehaviour
 
         yield break;
     }
+
+    private void Update()
+    {
+        Input.Updater();
+
+        if (statequeueflag)
+        {
+            StartCoroutine(StateChange());
+        }
+
+        StateMachineUpdater();
+    }
+
+    private void LateUpdate()
+    {
+        StateMachineLateUpdater();
+    }
+    private void FixedUpdate()
+    {
+        StateMachineFixedUpdater();
+    }
+
+
+
+
+
+
+    void StateMachineUpdater()
+    {
+        if (Now_GameState != gamestate.Undefined)
+        {
+            Executers[(int)Now_GameState].Updater();
+        }
+    }
+
+    void StateMachineLateUpdater()
+    {
+        if (Now_GameState != gamestate.Undefined)
+        {
+            Executers[(int)Now_GameState].LateUpdater();
+        }
+    }
+
+    void StateMachineFixedUpdater()
+    {
+        if (Now_GameState != gamestate.Undefined)
+        {
+            Executers[(int)Now_GameState].FixedUpdater();
+        }
+    }
+
 }
 
 

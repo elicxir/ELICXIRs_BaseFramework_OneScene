@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class GameStateExecuter : MonoBehaviour
 {
+    public GameManager GM
+    {
+        get
+        {
+            return GameManager.Game_Manager;
+        }
+    }
+
+
     //‚±‚ÌGameState‚ªŠJn‚³‚ê‚½Û‚ÉŒÄ‚Î‚ê‚Ü‚·B
     public virtual IEnumerator Init(gamestate before)
     {
