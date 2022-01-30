@@ -71,3 +71,11 @@ FadeOut()とFadeIn()関数を主に使えばよいでしょう。引数として
 GameStateExecuterを拡張してUIのキャンバス機能を用いる際に役に立つ機能を入れたもの。UIのキャンバス機能で作る部分(タイトル画面など)にはこちらを用いるとよいでしょう。
 
 GameStateExecuterを継承しているのでGameStateExecuterの代わりとして用いることができます。
+
+
+
+
+#### Miscs
+役に立つと思われる以下の機能を入れてあります。
+- EnumIndex:配列にEnumの名前を付けてわかりやすくする。
+    https://goropocha.hatenablog.com/entry/2021/02/11/232617

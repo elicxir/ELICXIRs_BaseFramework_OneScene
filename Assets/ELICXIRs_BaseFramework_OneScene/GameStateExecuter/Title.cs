@@ -17,7 +17,6 @@ public class Title : GameStateExecuter_Panel
     {
         yield return StartCoroutine(GM.FadeOut(0.3f));
         CanvasGroup.alpha = 0;
-
     }
 
     public override void Updater()

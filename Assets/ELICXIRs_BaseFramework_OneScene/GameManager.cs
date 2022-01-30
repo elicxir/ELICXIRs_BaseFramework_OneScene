@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     gamestate Pre_GameState = gamestate.Undefined;
     gamestate Next_GameState = gamestate.Undefined;
 
-    [SerializeField] GameStateExecuter[] Executers;
+    [EnumIndex(typeof(gamestate))] [SerializeField] GameStateExecuter[] Executers;
 
 
     //fade—p‚Ìƒpƒlƒ‹
@@ -95,7 +95,7 @@ public class GameManager : MonoBehaviour
 
     private void OnValidate()
     {
-        if (Executers.Length!= Enum.GetNames(typeof(gamestate)).Length)
+        if (Executers.Length != Enum.GetNames(typeof(gamestate)).Length)
         {
             Debug.LogError("Executers.Length must be same as the number of gamestate");
         }
@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
 public enum gamestate
 {
     Undefined,
-    
+
     Title,
     MainGame,
 }

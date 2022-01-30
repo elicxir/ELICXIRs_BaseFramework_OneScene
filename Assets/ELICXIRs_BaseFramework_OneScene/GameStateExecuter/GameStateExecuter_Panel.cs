@@ -34,6 +34,13 @@ public class GameStateExecuter_Panel : GameStateExecuter
             {
                 Debug.LogError("RectTransforméÊìæÇ…ñ‚ëËÇ™î≠ê∂");
             }
+            else
+            {
+                RectTransform.anchorMin = Vector2.zero;
+                RectTransform.anchorMax = Vector2.one;
+                RectTransform.offsetMin = Vector2.zero;
+                RectTransform.offsetMax = Vector2.zero;
+            }
         }
 
     }

@@ -836,9 +836,9 @@ GameObject:
   - component: {fileID: 2032454139}
   - component: {fileID: 2032454142}
   - component: {fileID: 2032454141}
-  - component: {fileID: 2032454140}
   - component: {fileID: 2032454144}
   - component: {fileID: 2032454143}
+  - component: {fileID: 2032454140}
   m_Layer: 0
   m_Name: MainGame
   m_TagString: Untagged
