@@ -15,9 +15,11 @@ https://opensource.org/licenses/mit-license.php
 - ゲームマネージャー
 - ゲームのステート切り替えの仕組みと各ステート管理
 
+プロジェクトを実行してスペースキーを押すとTitleからGameへの場面の遷移が行われます。フェード機能付きです。
+
 #### 1シーン完結の設計例:アクションゲーム
 
-シーン上にはメインのアクションゲーム部分を制作して、タイトル画面やリザルト画面はUIのパネルとして作成して必要に応じて呼び出すとよいでしょう。(少々読みにくいとは思いますが2D_ACTの構造を見てみると参考になる部分があるかもしれません。)
+シーン上にはメインのアクションゲーム部分を制作して、タイトル画面やリザルト画面はUIのパネルとして作成して必要に応じて呼び出すとよいでしょう。
 
 #### 1シーン完結の設計例:ノベルゲーム
 
@@ -37,8 +39,6 @@ Project Settings のPlayer / Other Settings / Active Input Handling を Input Sy
 
 
 ## 解説
-
-
 
 ### 用語編
 #### gamestate
@@ -64,3 +64,10 @@ FadeOut()とFadeIn()関数を主に使えばよいでしょう。引数として
     }
 
     
+### GameStateExecuter
+
+
+#### GameStateExecuter_Panel
+GameStateExecuterを拡張してUIのキャンバス機能を用いる際に役に立つ機能を入れたもの。UIのキャンバス機能で作る部分(タイトル画面など)にはこちらを用いるとよいでしょう。
+
+GameStateExecuterを継承しているのでGameStateExecuterの代わりとして用いることができます。
