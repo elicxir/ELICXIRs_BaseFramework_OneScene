@@ -39,7 +39,7 @@ Project Settings のPlayer / Other Settings / Active Input Handling を Input Sy
 
 
 ## 解説
-
+---
 ### 用語編
 #### gamestate
 現在のゲームの状態を表します。Titleならばタイトル画面を、MainGameならばメインのゲーム画面を表します。これは列挙型変数であり、ゲーム内に実装するすべての状態をここに列挙しておく必要があります。
@@ -65,18 +65,21 @@ FadeOut()とFadeIn()関数を主に使えばよいでしょう。引数として
         yield return StartCoroutine(GM.FadeOut(0.3f));
     }
 
-    
+---    
 ### GameStateExecuter
+Undefinedを除く各gamestateに対応するGameStateExecuterを作成し、参照を登録する必要があります。
 
+以下の規則に従ってGameStateExecuterを作成してください。
+- Undefined以外のgamestateの場合は、クラス名とgamestate名を合致させてください。
+- 
+
+---
 
 #### GameStateExecuter_Panel
 GameStateExecuterを拡張してUIのキャンバス機能を用いる際に役に立つ機能を入れたもの。UIのキャンバス機能で作る部分(タイトル画面など)にはこちらを用いるとよいでしょう。
 
 GameStateExecuterを継承しているのでGameStateExecuterの代わりとして用いることができます。
-
-
-
-
+---
 #### Miscs
 役に立つと思われる以下の機能を入れてあります。
 - EnumIndex:配列にEnumの名前を付けてわかりやすくする。

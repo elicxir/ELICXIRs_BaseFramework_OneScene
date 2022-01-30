@@ -90,7 +90,37 @@ public class GameManager : MonoBehaviour
 
 
 
+    [ContextMenu("Set Executers")]
+    private void SetExecuters()
+    {
+        if (Enum.GetNames(typeof(gamestate)).Length < 2)
+        {
+            Debug.LogError("undefined‚É‰Á‚¦‚ÄAÅ’á1‚Â‚Ìgamestate‚ª•K—v‚Å‚·");
+            return;
+        }
 
+        Executers = new GameStateExecuter[Enum.GetNames(typeof(gamestate)).Length];
+
+        GameStateExecuter[] exs = GetComponentsInChildren<GameStateExecuter>();
+
+        foreach (var item in exs)
+        {
+            if (item.name == "GameManager")
+            {
+                Executers[0] = item;
+            }
+            else
+            {
+                for (int i = 1; i < Enum.GetNames(typeof(gamestate)).Length; i++)
+                {
+                    if(item.name== ((gamestate)i).ToString())
+                    {
+                        Executers[i] = item;
+                    }
+                }
+            }
+        }
+    }
 
 
     private void OnValidate()
