@@ -42,7 +42,9 @@ Project Settings のPlayer / Other Settings / Active Input Handling を Input Sy
 
 ### 用語編
 #### gamestate
-現在のゲームの状態を表します。Titleならばタイトル画面を、MainGameならばメインのゲーム画面を表します。これは列挙型変数であり、
+現在のゲームの状態を表します。Titleならばタイトル画面を、MainGameならばメインのゲーム画面を表します。これは列挙型変数であり、ゲーム内に実装するすべての状態をここに列挙しておく必要があります。
+
+Undefinedを除く各gamestateに対応するGameStateExecuterを作成し、参照を登録する必要があります。
 
 ### GameManager
 GameManagerはゲーム全体の管理を行うためのスクリプトです。シングルトンであるため一つしか存在しないことが保証されています。
