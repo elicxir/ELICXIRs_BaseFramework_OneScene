@@ -71,7 +71,8 @@ Undefinedを除く各gamestateに対応するGameStateExecuterを作成し、参
 
 以下の規則に従ってGameStateExecuterを作成してください。
 - Undefined以外のgamestateの場合は、クラス名とgamestate名を合致させてください。
-- 
+- GameStateExecuterはGameManagerの子クラスになっていることが望ましいです。
+- GameManagerを右クリックしてSetExecutersを実行することで上記のルールに従っている場合は自動で参照の設定が行われます。
 
 ---
 
