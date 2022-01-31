@@ -7,6 +7,14 @@ Copyright (c) 2022 ELICXIR
 Released under the MIT license
 https://opensource.org/licenses/mit-license.php
 
+
+## お知らせ
+複数シーンを扱えるようにした改良版を現在作成中です
+
+https://github.com/elicxir/ELICXIRs_BaseFramework
+
+今後の開発は上のプロジェクトのほうに引き継ぐため上のプロジェクトも確認をお願いします。
+
 ## 概要
 
 1シーンで完結するゲームをUnityで制作するためのベースとなるアセット

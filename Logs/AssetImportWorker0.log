@@ -136,3 +136,60 @@ Received Import Request.
 Start importing Assets/ELICXIRs_BaseFramework_OneScene/GameManager.cs using Guid(ea0b54e4ba60a544dbcd068f5a3a2c33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b49465006e56d5033f32fa0bb9d56e05') in 0.019706 seconds 
   Import took 0.022832 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 3127.780446 seconds.
+  path: Assets/ELICXIRs_BaseFramework_OneScene/GameManager.prefab
+  artifactKey: Guid(af1468d647299864196265403f9a9bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_BaseFramework_OneScene/GameManager.prefab using Guid(af1468d647299864196265403f9a9bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52d57f434f523df1ea7be38cf5a24fa1') in 0.155605 seconds 
+  Import took 0.216672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.570972 seconds.
+  path: Assets/ELICXIRs_InputSystemManager/InputActions.inputactions
+  artifactKey: Guid(199b4689ea6eb4349bcb84493447d7a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_InputSystemManager/InputActions.inputactions using Guid(199b4689ea6eb4349bcb84493447d7a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c84d23c5cebece22ac3cf0ab75e6d6') in 0.012211 seconds 
+  Import took 0.016313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005733 seconds.
+  path: Assets/ELICXIRs_BaseFramework_OneScene/GameStateExecuter/GameStateExecuter_Panel.cs
+  artifactKey: Guid(0531037e525082c4dbdc418bf08929e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_BaseFramework_OneScene/GameStateExecuter/GameStateExecuter_Panel.cs using Guid(0531037e525082c4dbdc418bf08929e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6180f3df5c3828f9fccfec3fc87df158') in 0.001539 seconds 
+  Import took 0.005607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003436 seconds.
+  path: Assets/ELICXIRs_InputSystemManager/InputSystemManager.cs
+  artifactKey: Guid(f44767ff1bdd70f4e97486a36c834d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_InputSystemManager/InputSystemManager.cs using Guid(f44767ff1bdd70f4e97486a36c834d85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '643bbe91718edf70926c90ac508caea1') in 0.001403 seconds 
+  Import took 0.005069 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004542 seconds.
+  path: Assets/Miscs/EnumIndexAttribute.cs
+  artifactKey: Guid(ccb0dcf584092724d8ea6b17f1b0f9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Miscs/EnumIndexAttribute.cs using Guid(ccb0dcf584092724d8ea6b17f1b0f9af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d9fecd14e3c1732e7ef6bcb3686c3f4') in 0.001616 seconds 
+  Import took 0.005423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001767 seconds.
+  path: Assets/ELICXIRs_InputSystemManager/InputSystemManager.prefab
+  artifactKey: Guid(e54e8b4566fbcdf4b8320d57449a774a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_InputSystemManager/InputSystemManager.prefab using Guid(e54e8b4566fbcdf4b8320d57449a774a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf364be54875d241af6c16817166c2e1') in 0.004136 seconds 
+  Import took 0.007893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001897 seconds.
+  path: Assets/ELICXIRs_BaseFramework_OneScene/GameStateExecuter/Title.cs
+  artifactKey: Guid(46ae65b9376e1644b8f934e51a2ce4ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ELICXIRs_BaseFramework_OneScene/GameStateExecuter/Title.cs using Guid(46ae65b9376e1644b8f934e51a2ce4ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae51529a5cbb6b762f04b52b66f4b11') in 0.001460 seconds 
+  Import took 0.004818 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
