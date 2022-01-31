@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour
     //GameManager‚ÌƒVƒ“ƒOƒ‹ƒgƒ“‰»
     public static GameManager Game_Manager;
 
-    public InputSystemManager Input;
+    [HideInInspector]public InputSystemManager Input;
+
+    public bool DebugMode;
 
 
     public gamestate GameState
@@ -32,7 +34,10 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator FadeOut(float time, Action action = null)
     {
-        print("fade");
+        if (DebugMode)
+        {
+            print("fade");
+        }
         float mult = 1 / time;
         transitionpanel.alpha = 0;
 
@@ -125,6 +130,11 @@ public class GameManager : MonoBehaviour
 
     private void OnValidate()
     {
+        if (Input == null)
+        {
+            Input= GetComponentInChildren<InputSystemManager>();
+        }
+
         if (Executers.Length != Enum.GetNames(typeof(gamestate)).Length)
         {
             Debug.LogError("Executers.Length must be same as the number of gamestate");
@@ -137,6 +147,10 @@ public class GameManager : MonoBehaviour
                 Debug.LogError("GameStateExecuter is null");
             }
         }
+
+
+
+
     }
 
 
@@ -189,7 +203,10 @@ public class GameManager : MonoBehaviour
 
         Now_GameState = Next_GameState;
 
-        print($"GameState was Changed from {Pre_GameState} to {Now_GameState}");
+        if (DebugMode)
+        {
+            print($"GameState was Changed from {Pre_GameState} to {Now_GameState}");
+        }
 
         yield break;
     }
@@ -205,7 +222,6 @@ public class GameManager : MonoBehaviour
 
         StateMachineUpdater();
     }
-
     private void LateUpdate()
     {
         StateMachineLateUpdater();

@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Input: {fileID: 926426647}
+  DebugMode: 1
   Executers:
   - {fileID: 792213285}
   - {fileID: 1454982747}

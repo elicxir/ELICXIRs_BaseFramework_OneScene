@@ -63,7 +63,7 @@ public class InputSystemManager : MonoBehaviour
             }
 
 
-            if (Button)
+            if (GameManager.Game_Manager.DebugMode && Button)
             {
                 print($"input:{id}");
             }
